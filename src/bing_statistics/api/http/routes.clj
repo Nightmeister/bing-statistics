@@ -6,7 +6,7 @@
 (defn- search-handler [search-keys]
   "Handler for GET /search request."
   (json/write-str
-    (search search-keys)))
+    (search (set search-keys))))
 
 (defroutes all-routes
            "Service HTTP API routes definitions"
